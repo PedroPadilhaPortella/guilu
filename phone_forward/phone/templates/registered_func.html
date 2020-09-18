@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+</head>
+<body>
+    <p><a href="{% url 'index' %}">Cadastrar Usuários</a></p>
+    {% for func in all_func %}
+    <p>{{ func.alias }} => {{ func.phone_number }} <a href="{% url 'edit_func' func.phone_number %}">Editar</a> | <a href="{% url 'remove_func' func.phone_number %}">Remover</a></p>
+    {% endfor %}
+</body>
+</html>
