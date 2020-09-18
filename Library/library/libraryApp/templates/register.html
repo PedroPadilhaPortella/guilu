@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryApp</title>
+</head>
+<body class="body">
+    <h1>LibraryApp</h1>
+    <p class="link"><a href="{% url 'index' %}">Voltar</a></p>
+    <h2>Cadastrar Exemplar</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="title" placeholder="Título">
+        <input type="text" name="author" placeholder="Autor">
+        <button type="submit">Cadastrar</button>
+    </form>
+
+</body>
+<style>
+    .body {
+    text-align: center;
+    background-color:#9966cc;
+}
+.link a {
+    text-decoration:none;
+    color: white;
+}
+
+</style>
+</html>

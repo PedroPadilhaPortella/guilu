@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryApp</title>
+</head>
+<body class="body">
+    <h1>LibraryApp</h1>
+    <p class="link"><a href="{% url 'register' %}">Cadastrar Exemplares</a></p>
+
+    {% for book in books %}
+        <span>{{ book.title }} => {{ book.author }}</span>
+    {% endfor %}
+
+
+</body>
+<style>
+    .body {
+    text-align: center;
+    background-color:#9966cc;
+}
+.link a {
+    text-decoration:none;
+    color: white;
+}
+table{
+    border: solid 1px black;
+}
+</style>
+</html>
